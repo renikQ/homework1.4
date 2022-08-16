@@ -1,3 +1,5 @@
+import java.time.LocalDateTime;
+
 public class Main {
     public static void main(String[] args) {
         // Задание № 1
@@ -21,12 +23,15 @@ public class Main {
         // Задание № 2
         int friday = 5;
         for (; friday <= 31; friday = friday + 7) {
-            System.out.println(friday);
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
         }
 
         // задача №3
-        int lastYear = 2022 - 200;
-        int nextYear = 2022 + 100;
+
+        int currentYear = LocalDateTime.now().getYear();
+
+        int lastYear = currentYear - 200;
+        int nextYear = currentYear + 100;
         for (; lastYear <= nextYear; lastYear++){
             if (lastYear % 79 == 0) {
                 System.out.println(lastYear);
